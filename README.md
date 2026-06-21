@@ -6,3 +6,4 @@ Skills for AI agents working on forecasting and time-series workflows.
 
 - `forecasting-data-prep`: foundational skill for preparing, validating, splitting, and diagnosing time-series data before library-specific modeling.
 - `prophet-forecasting`: skill for using Prophet after data preparation, including regressors, holidays, validation, diagnostics, and leakage checks.
+- `statsmodels-forecasting`: skill for using Statsmodels after data preparation, including classical/econometric models, exogenous regressors, temporal validation, intervals, and diagnostics.

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Statsmodels Forecasting"
+  short_description: "Classical forecasting without leakage"
+  default_prompt: "Use $statsmodels-forecasting to model my prepared time series with Statsmodels."
+policy:
+  allow_implicit_invocation: true
