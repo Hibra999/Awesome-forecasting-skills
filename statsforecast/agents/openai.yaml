@@ -1,0 +1,4 @@
+interface:
+  display_name: "StatsForecast"
+  short_description: "Statistical forecasting without leakage"
+  default_prompt: "Use $statsforecast to train, validate, and forecast with prepared StatsForecast data."
