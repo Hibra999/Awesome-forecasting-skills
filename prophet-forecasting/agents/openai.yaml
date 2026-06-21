@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prophet Forecasting"
+  short_description: "Use Prophet without leakage"
+  default_prompt: "Use $prophet-forecasting to model my prepared time series with Prophet."
+policy:
+  allow_implicit_invocation: true
