@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kats Forecasting"
+  short_description: "Kats forecasting without leakage"
+  default_prompt: "Use $kats-forecasting to model my prepared time series with Kats."
