@@ -1,0 +1,4 @@
+interface:
+  display_name: "Time-Series-Library Forecasting"
+  short_description: "TSLib forecasting without leakage"
+  default_prompt: "Use $time-series-library-forecasting to run a prepared forecasting benchmark with Time-Series-Library."
