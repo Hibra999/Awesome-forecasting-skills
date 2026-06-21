@@ -1,0 +1,4 @@
+interface:
+  display_name: "Greykite Forecasting"
+  short_description: "Greykite forecasts without leakage"
+  default_prompt: "Use $greykite-forecasting to train and validate a prepared Greykite forecast."
