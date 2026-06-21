@@ -1,0 +1,6 @@
+interface:
+  display_name: "Forecasting Data Prep"
+  short_description: "Prepare time-series data safely"
+  default_prompt: "Use $forecasting-data-prep to audit and prepare my time-series dataset before modeling."
+policy:
+  allow_implicit_invocation: true
