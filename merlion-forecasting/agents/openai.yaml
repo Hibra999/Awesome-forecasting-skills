@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merlion Forecasting"
+  short_description: "Merlion forecasts without leakage"
+  default_prompt: "Use $merlion-forecasting to train and validate a prepared Merlion forecasting workflow."
