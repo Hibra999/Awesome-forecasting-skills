@@ -1,0 +1,4 @@
+interface:
+  display_name: "sktime Forecasting"
+  short_description: "Unified forecasting without leakage"
+  default_prompt: "Use $sktime-forecasting to model my prepared time series with sktime."

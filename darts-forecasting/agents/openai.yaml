@@ -1,0 +1,4 @@
+interface:
+  display_name: "Darts Forecasting"
+  short_description: "Darts forecasting without leakage"
+  default_prompt: "Use $darts-forecasting to model my prepared time series with Darts."
