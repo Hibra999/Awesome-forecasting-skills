@@ -1,0 +1,4 @@
+interface:
+  display_name: "PyTorch Forecasting"
+  short_description: "Deep forecasting without leakage"
+  default_prompt: "Use $pytorch-forecasting to train and validate a prepared neural forecasting workflow."
