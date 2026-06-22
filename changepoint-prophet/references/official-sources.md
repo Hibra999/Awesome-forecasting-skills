@@ -1,0 +1,27 @@
+# Official Sources Consulted
+
+- GitHub repository and README: https://github.com/facebook/prophet
+  - Prophet is an automatic forecasting procedure for time series with nonlinear trends, seasonality, holidays, missing data, trend shifts, and outlier handling.
+  - Python package name is `prophet`; prior to v1.0 it was `fbprophet`.
+  - README release notes list version `1.3.0` dated January 27, 2026.
+- PyPI: https://pypi.org/project/prophet/
+  - Latest listed release during review: `prophet 1.3.0`, released January 27, 2026.
+  - Requires Python `>=3.7`; extras include `dev` and `parallel`.
+- Quick Start: https://facebook.github.io/prophet/docs/quick_start.html
+  - Python API uses pandas dataframe columns `ds` and `y`, `Prophet().fit(df)`, `make_future_dataframe`, `predict`, `plot`, and `plot_components`.
+- Trend Changepoints: https://facebook.github.io/prophet/docs/trend_changepoints.html
+  - Automatic changepoints use potential changepoints plus sparse prior/L1-style regularization.
+  - Defaults: 25 potential changepoints in first 80% of history; controls include `n_changepoints`, `changepoint_range`, `changepoint_prior_scale`, and `changepoints`.
+  - Significant changepoints can be plotted with `add_changepoints_to_plot`.
+- Seasonality, holidays, regressors: https://facebook.github.io/prophet/docs/seasonality%2C_holiday_effects%2C_and_regressors.html
+  - Documents holidays dataframes, country holidays, custom seasonalities, conditional seasonalities, and `add_regressor`.
+  - Future regressor values must be known.
+- Uncertainty intervals: https://facebook.github.io/prophet/docs/uncertainty_intervals.html
+  - Forecast intervals include trend uncertainty and observation noise by default; seasonality uncertainty requires MCMC.
+  - Trend uncertainty assumes future trend changes resemble historical changes.
+- Outliers: https://facebook.github.io/prophet/docs/outliers.html
+  - Outliers can be fit as trend changes and inflate uncertainty; setting affected `y` values to missing is documented.
+- Diagnostics: https://facebook.github.io/prophet/docs/diagnostics.html
+  - Documents `cross_validation`, `performance_metrics`, `plot_cross_validation_metric`, parallel options, and hyperparameter tuning including `changepoint_prior_scale`.
+- Python source/docstrings: https://raw.githubusercontent.com/facebook/prophet/main/python/prophet/forecaster.py and https://raw.githubusercontent.com/facebook/prophet/main/python/prophet/plot.py
+  - Constructor/docstrings confirm `growth`, changepoint parameters, scaling, `fit`, `predict`, timezone restriction, `m.changepoints`, `m.params["delta"]`, and `add_changepoints_to_plot` thresholding behavior.

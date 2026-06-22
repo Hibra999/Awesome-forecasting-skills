@@ -34,6 +34,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `aggregation-tsfel` | TSFEL feature aggregation for tabular ML matrices, with ndarray/Series/DataFrame inputs, univariate/multivariate signals, windowing, statistical/temporal/spectral/fractal domains, dataset extraction, custom configs, and anti-leakage validation. |
 | `aggregation-tsflex` | tsflex flexible feature aggregation with pandas Series/DataFrame/list inputs, asynchronous multivariate data, irregular sampling, custom callable features, strided windows, chunking, external feature wrappers, and anti-leakage validation. |
 | `changepoint-ruptures` | ruptures offline change point detection with exact/approximate search methods, cost functions, penalties, breakpoint-count tuning, segmentation metrics, plotting, custom costs, and anti-leakage validation. |
+| `changepoint-prophet` | Prophet trend changepoint analysis inside forecasting workflows, with ds/y validation, automatic/manual changepoints, prior-scale tuning, significant-delta plotting, cross-validation, intervals, regressors, shocks, and anti-leakage safeguards. |
 
 ## Workflow Notes
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prophet Changepoints"
+  short_description: "Detect trend changepoints with Prophet."
+  default_prompt: "Use $changepoint-prophet to validate Prophet ds/y data, configure automatic or manual trend changepoints, tune changepoint prior scale with temporal cross-validation, visualize significant changepoints, inspect trend deltas, and avoid leakage in retrospective or forecasting workflows."
