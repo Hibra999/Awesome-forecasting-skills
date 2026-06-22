@@ -1,0 +1,4 @@
+interface:
+  display_name: "skforecast"
+  short_description: "skforecast without leakage"
+  default_prompt: "Use $skforecast to train, validate, and forecast with prepared skforecast data."
