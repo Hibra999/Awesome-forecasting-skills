@@ -1,0 +1,4 @@
+interface:
+  display_name: "ADTK Changepoints"
+  short_description: "Detect ADTK change events."
+  default_prompt: "Use $changepoint-adtk to validate pandas time series, select ADTK level-shift, persistence, volatility-shift, seasonal, autoregression, threshold, and multivariate anomaly detectors as changepoint candidates, configure windows/side/c/frequency, evaluate events, plot results, and enforce anti-leakage safeguards."
