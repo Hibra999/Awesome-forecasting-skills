@@ -30,6 +30,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `classification-etna` | ETNA experimental binary time-series classification with TSFresh/WEASEL feature extraction, sklearn classifiers, fold masks, predictability analysis, and leakage-safe validation. |
 | `clustering-stumpy` | STUMPY matrix-profile pattern discovery with query matching, motifs/discords, multidimensional motifs, MPdist similarity, snippets, segmentation, and leakage-aware validation. |
 | `aggregation-tsfresh` | tsfresh feature aggregation for transforming time series into tabular ML matrices, with flat/stacked/dict formats, feature settings, relevance filtering, sklearn transformers, Dask/Spark scaling, rolling windows, and anti-leakage validation. |
+| `aggregation-kats` | Kats TSFeatures aggregation for converting TimeSeriesData into tabular feature rows, with univariate/multivariate outputs, multiple-series loops, feature groups, opt-in/out switches, and leakage-safe downstream ML validation. |
 
 ## Workflow Notes
 

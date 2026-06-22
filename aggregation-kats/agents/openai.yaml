@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kats Aggregation"
+  short_description: "Extract tabular time-series features with Kats TSFeatures."
+  default_prompt: "Use $aggregation-kats to validate Kats TimeSeriesData inputs, extract TSFeatures feature dictionaries, handle univariate/multivariate or multiple-series batches, and build leakage-safe tabular ML feature matrices."
