@@ -1,0 +1,4 @@
+interface:
+  display_name: "TSFEL Aggregation"
+  short_description: "Extract tabular time-series features with TSFEL."
+  default_prompt: "Use $aggregation-tsfel to validate TSFEL inputs, configure statistical/temporal/spectral/fractal feature extraction, produce leakage-safe tabular feature matrices, and handle windows, sampling frequency, and multivariate signals."

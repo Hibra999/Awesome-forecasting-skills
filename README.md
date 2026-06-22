@@ -31,6 +31,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `clustering-stumpy` | STUMPY matrix-profile pattern discovery with query matching, motifs/discords, multidimensional motifs, MPdist similarity, snippets, segmentation, and leakage-aware validation. |
 | `aggregation-tsfresh` | tsfresh feature aggregation for transforming time series into tabular ML matrices, with flat/stacked/dict formats, feature settings, relevance filtering, sklearn transformers, Dask/Spark scaling, rolling windows, and anti-leakage validation. |
 | `aggregation-kats` | Kats TSFeatures aggregation for converting TimeSeriesData into tabular feature rows, with univariate/multivariate outputs, multiple-series loops, feature groups, opt-in/out switches, and leakage-safe downstream ML validation. |
+| `aggregation-tsfel` | TSFEL feature aggregation for tabular ML matrices, with ndarray/Series/DataFrame inputs, univariate/multivariate signals, windowing, statistical/temporal/spectral/fractal domains, dataset extraction, custom configs, and anti-leakage validation. |
 
 ## Workflow Notes
 
