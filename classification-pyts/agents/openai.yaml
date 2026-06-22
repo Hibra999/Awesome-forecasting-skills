@@ -1,0 +1,4 @@
+interface:
+  display_name: "pyts Classification"
+  short_description: "Classify time series with leakage-safe pyts workflows."
+  default_prompt: "Use $classification-pyts to train, validate, and evaluate a pyts time-series classification workflow from data prepared by ts-classification-data-prep."
