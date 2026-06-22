@@ -1,0 +1,4 @@
+interface:
+  display_name: "sktime Classification"
+  short_description: "Classify time series with sktime"
+  default_prompt: "Use $classification-sktime to train and validate a leakage-safe sktime time-series classification workflow from prepared data."
