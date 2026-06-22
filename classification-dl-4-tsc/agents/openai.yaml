@@ -1,0 +1,4 @@
+interface:
+  display_name: "dl-4-tsc Classification"
+  short_description: "Classify series with dl-4-tsc research workflows."
+  default_prompt: "Use $classification-dl-4-tsc to prepare, run, validate, and evaluate a dl-4-tsc time-series classification experiment from ts-classification-data-prep data."
