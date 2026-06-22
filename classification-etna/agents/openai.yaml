@@ -1,0 +1,4 @@
+interface:
+  display_name: "ETNA Classification"
+  short_description: "Classify time series with experimental ETNA tools."
+  default_prompt: "Use $classification-etna to build a leakage-safe ETNA experimental binary time-series classification workflow from ts-classification-data-prep data."
