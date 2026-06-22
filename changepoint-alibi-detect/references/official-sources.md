@@ -1,0 +1,29 @@
+# Official Sources Consulted
+
+- GitHub repository: https://github.com/SeldonIO/alibi-detect
+  - README, supported algorithms table, install commands, release badge, examples, and project scope.
+- Official documentation overview: https://docs.seldon.io/projects/alibi-detect/en/stable/
+  - Library scope: outlier, adversarial, and drift detection for tabular data, text, images, and time series.
+- Algorithm overview source: https://github.com/SeldonIO/alibi-detect/blob/master/doc/source/overview/algorithms.md
+  - Supported detector families and modality/online support.
+- Online MMD docs: https://github.com/SeldonIO/alibi-detect/blob/master/doc/source/cd/methods/onlinemmddrift.ipynb
+  - ERT, sliding test window, single-instance `predict`, output keys, and state management.
+- Online LSDD docs: https://github.com/SeldonIO/alibi-detect/blob/master/doc/source/cd/methods/onlinelsdddrift.ipynb
+  - LSDD drift detector usage, parameters, output keys, and state management.
+- Online CVM docs: https://github.com/SeldonIO/alibi-detect/blob/master/doc/source/cd/methods/onlinecvmdrift.ipynb
+  - Continuous data assumptions, `window_sizes`, ERT timing, multivariate correction, and Numba warning.
+- Online FET docs: https://github.com/SeldonIO/alibi-detect/blob/master/doc/source/cd/methods/onlinefetdrift.ipynb
+  - Bernoulli stream assumptions, `alternative`, `lam`, `t_max`, `window_sizes`, and output keys.
+- Drift package exports: https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/__init__.py
+  - Exported drift detector class names.
+- Online detector base: https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/base_online.py
+  - Online prediction output structure, state, thresholds, `ert`, and single-instance workflow.
+- Online detector implementations:
+  - https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/mmd_online.py
+  - https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/lsdd_online.py
+  - https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/cvm_online.py
+  - https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/cd/fet_online.py
+- Outlier package exports: https://github.com/SeldonIO/alibi-detect/blob/master/alibi_detect/od/__init__.py
+  - Official time-series outlier detector names used only as anomaly-event proxies.
+- PyPI package: https://pypi.org/project/alibi-detect/
+  - Latest release and Python requirement.

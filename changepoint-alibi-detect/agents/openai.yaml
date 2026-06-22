@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alibi Detect Changepoints"
+  short_description: "Detect Alibi drift change alarms."
+  default_prompt: "Use $changepoint-alibi-detect to validate time-ordered arrays, choose Alibi Detect online drift detectors as changepoint proxies, configure reference data, ERT, window sizes, backends, preprocessing, thresholds, state handling, evaluation delay, and anti-leakage safeguards."
