@@ -1,0 +1,4 @@
+interface:
+  display_name: "TSLib Classification"
+  short_description: "Classify time series with TSLib"
+  default_prompt: "Use $classification-time-series-library to train and validate a leakage-safe THUML Time-Series-Library classification workflow from prepared UEA-style data."

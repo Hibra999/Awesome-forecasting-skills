@@ -23,6 +23,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `etna-forecasting` | ETNA multi-segment forecasting with `TSDataset`, transforms, exogenous features, pipelines, backtesting, intervals, and diagnostics. |
 | `fedot-forecasting` | FEDOT AutoML time-series forecasting with `InputData`, `TsForecastingParams`, operation repositories, validation, and exogenous workflows. |
 | `classification-sktime` | sktime time-series classification after `ts-classification-data-prep`, including panel formats, classifier families, stratified CV, and anti-leakage validation. |
+| `classification-time-series-library` | THUML Time-Series-Library deep learning classification with UEA `.ts` files, padding masks, official scripts, model support checks, and leakage-safe evaluation. |
 
 ## Workflow Notes
 
