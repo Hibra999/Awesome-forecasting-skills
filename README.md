@@ -39,6 +39,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `changepoint-time-series-library` | THUML Time-Series-Library process-change event detection via the documented anomaly_detection task, with PSM/MSL/SMAP/SMD/SWAT loaders, reconstruction-error thresholds, anomaly_ratio, event-level adjustment, metrics, and leakage-safe anomaly-to-changepoint conversion. |
 | `changepoint-merlion` | Salesforce Merlion native BOCPD changepoint detection with TimeSeries inputs, LevelShift/TrendChange/Auto change kinds, online updates, z-score probability scoring, thresholded alarms, TSAD metrics, plotting, and anti-leakage validation. |
 | `changepoint-alibi-detect` | Seldon Alibi Detect changepoint-like distribution-change monitoring with online MMD/LSDD/CVM/FET drift detectors, rolling offline drift tests, reference windows, ERT, window sizes, state, plotting, and anti-leakage validation. |
+| `changepoint-greykite` | LinkedIn Greykite long-term trend, seasonality, and level-shift changepoint analysis with `ChangepointDetector`, Silverkite changepoint configs, adaptive lasso, forecast backtests, plotting, and anti-leakage validation. |
 
 ## Workflow Notes
 
