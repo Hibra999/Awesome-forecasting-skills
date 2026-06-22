@@ -40,6 +40,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `changepoint-merlion` | Salesforce Merlion native BOCPD changepoint detection with TimeSeries inputs, LevelShift/TrendChange/Auto change kinds, online updates, z-score probability scoring, thresholded alarms, TSAD metrics, plotting, and anti-leakage validation. |
 | `changepoint-alibi-detect` | Seldon Alibi Detect changepoint-like distribution-change monitoring with online MMD/LSDD/CVM/FET drift detectors, rolling offline drift tests, reference windows, ERT, window sizes, state, plotting, and anti-leakage validation. |
 | `changepoint-greykite` | LinkedIn Greykite long-term trend, seasonality, and level-shift changepoint analysis with `ChangepointDetector`, Silverkite changepoint configs, adaptive lasso, forecast backtests, plotting, and anti-leakage validation. |
+| `changepoint-luminol` | LinkedIn Luminol anomaly-window changepoint candidates with `AnomalyDetector`, bitmap/derivative/EMA/threshold/sign-test detectors, exact severity timestamps, correlation-based root-cause ranking, plotting, and anti-leakage validation. |
 
 ## Workflow Notes
 
