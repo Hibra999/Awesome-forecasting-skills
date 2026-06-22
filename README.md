@@ -24,6 +24,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `fedot-forecasting` | FEDOT AutoML time-series forecasting with `InputData`, `TsForecastingParams`, operation repositories, validation, and exogenous workflows. |
 | `classification-sktime` | sktime time-series classification after `ts-classification-data-prep`, including panel formats, classifier families, stratified CV, and anti-leakage validation. |
 | `classification-time-series-library` | THUML Time-Series-Library deep learning classification with UEA `.ts` files, padding masks, official scripts, model support checks, and leakage-safe evaluation. |
+| `classification-tslearn` | tslearn time-series classification with 3D arrays, DTW/GAK KNN/SVC, shapelets, MLP, early classification, stratified evaluation, and leakage-safe preprocessing. |
 
 ## Workflow Notes
 

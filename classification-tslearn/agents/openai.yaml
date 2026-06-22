@@ -1,0 +1,4 @@
+interface:
+  display_name: "tslearn Classification"
+  short_description: "Classify time series with leakage-safe tslearn workflows."
+  default_prompt: "Use $classification-tslearn to train, validate, and evaluate a tslearn time-series classification workflow from data prepared by ts-classification-data-prep."
