@@ -1,0 +1,4 @@
+interface:
+  display_name: "ETNA Forecasting"
+  short_description: "Forecast safely with ETNA"
+  default_prompt: "Use $etna-forecasting to train, validate, and diagnose an ETNA forecasting pipeline from prepared time-series data."
