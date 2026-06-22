@@ -1,0 +1,4 @@
+interface:
+  display_name: "STUMPY Clustering"
+  short_description: "Find patterns and motifs with STUMPY matrix profiles."
+  default_prompt: "Use $clustering-stumpy to search query patterns, discover motifs, compute matrix-profile distances, and validate STUMPY time-series pattern discovery workflows."

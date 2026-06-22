@@ -1,6 +1,6 @@
 # Awesome Forecasting Skills
 
-Skills for AI agents working on forecasting, time-series data preparation, and time-series classification workflows.
+Skills for AI agents working on forecasting, time-series data preparation, time-series classification, and time-series pattern discovery workflows.
 
 ## Skills
 
@@ -28,10 +28,12 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `classification-pyts` | pyts time-series classification with fixed-length 2D/3D arrays, SAXVSM, BOSSVS, KNN/DTW, shapelets, interval forests, TSBF, WEASEL/MUSE pipelines, and leakage-safe validation. |
 | `classification-dl-4-tsc` | hfawaz dl-4-tsc research-code classification with UCR TSV/MTS NPY inputs, TensorFlow/Keras DNNs, fixed 3D tensors, CLI runs, saved metrics, and leakage-aware validation. |
 | `classification-etna` | ETNA experimental binary time-series classification with TSFresh/WEASEL feature extraction, sklearn classifiers, fold masks, predictability analysis, and leakage-safe validation. |
+| `clustering-stumpy` | STUMPY matrix-profile pattern discovery with query matching, motifs/discords, multidimensional motifs, MPdist similarity, snippets, segmentation, and leakage-aware validation. |
 
 ## Workflow Notes
 
 - Forecasting skills depend conceptually on `forecasting-data-prep`: prepare and validate data first, then model.
 - Classification skills depend conceptually on `ts-classification-data-prep`: prepare, pad/truncate, validate labels and tensor/panel shapes first, then classify.
+- Pattern discovery skills require ordered, numeric time-series data with documented window length, normalization, split, and validation policy before mining motifs or matches.
 - Each skill keeps `SKILL.md` concise and uses `references/` for longer model maps, data format notes, official sources, and limitations.
 - Scripts are included only when they add repeatable validation.
