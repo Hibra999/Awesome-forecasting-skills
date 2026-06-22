@@ -1,0 +1,4 @@
+interface:
+  display_name: "TSLib Changepoints"
+  short_description: "Detect process-change events with TSLib anomaly models."
+  default_prompt: "Use $changepoint-time-series-library to validate THUML Time-Series-Library anomaly-detection datasets, configure run.py anomaly_detection experiments, choose documented anomaly scripts and models, tune window length and anomaly ratio, convert point anomaly labels to event/changepoint intervals, evaluate with event-level safeguards, and avoid leakage."

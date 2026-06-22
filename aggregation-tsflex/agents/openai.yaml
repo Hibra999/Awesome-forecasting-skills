@@ -1,0 +1,4 @@
+interface:
+  display_name: "tsflex Aggregation"
+  short_description: "Extract flexible time-series feature matrices with tsflex."
+  default_prompt: "Use $aggregation-tsflex to validate pandas time-series inputs, define tsflex FeatureCollection descriptors, extract strided rolling features, handle asynchronous multivariate data, chunk gaps, integrate external feature functions, and enforce leakage-safe aggregation."

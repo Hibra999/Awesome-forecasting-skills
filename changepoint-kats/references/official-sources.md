@@ -1,0 +1,37 @@
+# Official Sources Consulted
+
+- GitHub repository and README: https://github.com/facebookresearch/Kats
+  - Kats is a toolkit for time-series analysis including detection, forecasting, feature extraction/embedding, and multivariate analysis.
+  - README documents CUSUM detection with `TimeSeriesData` and `CUSUMDetector(timeseries).detector()`.
+  - Latest GitHub release shown during review: Kats v0.2.0, March 15, 2022.
+- Kats homepage: https://facebookresearch.github.io/Kats/
+  - Detection support includes seasonalities, outlier, change point, and slow trend changes.
+- PyPI: https://pypi.org/project/kats/
+  - Latest release during review: `kats 0.2.0`, released March 15, 2022.
+  - Installation: `pip install kats`; minimal install is `MINIMAL_KATS=1 pip install kats` with reduced functionality.
+- Kats API index: https://facebookresearch.github.io/Kats/api/
+  - Documents the `kats.detectors` package modules and `TimeSeriesData`/`TimeSeriesChangePoint`.
+- `kats.consts`: https://facebookresearch.github.io/Kats/api/kats.consts.html
+  - Documents `TimeSeriesData`, accepted sources, `time_col_name`, value shape, validation, interpolation, plotting, conversion, and `TimeSeriesChangePoint`.
+- `kats.detectors.cusum_detection`: https://facebookresearch.github.io/Kats/api/kats.detectors.cusum_detection.html
+  - Documents CUSUM changepoint detection, Gaussian assumptions, one increase/decrease change point, detector parameters, return type, and univariate/multivariate plotting caveat.
+- Official `cusum_detection.py` source: https://raw.githubusercontent.com/facebookresearch/Kats/main/kats/detectors/cusum_detection.py
+  - Confirms `CUSUMDetector`, `VectorizedCUSUMDetector`, defaults, and CUSUM-specific output fields.
+- `kats.detectors.bocpd`: https://facebookresearch.github.io/Kats/api/kats.detectors.bocpd.html
+  - Documents `BOCPDetector`, online semantics, `lag`, `threshold`, `changepoint_prior`, model types, priors, plots, `get_change_prob`, and `get_run_length_matrix`.
+- Official `bocpd.py` source: https://raw.githubusercontent.com/facebookresearch/Kats/main/kats/detectors/bocpd.py
+  - Confirms `BOCPDModelType` values, parameter classes, detection signature, and Ax dependency for prior search.
+- `kats.detectors.cusum_model`: https://facebookresearch.github.io/Kats/api/kats.detectors.cusum_model.html
+  - Documents `CUSUMDetectorModel`, multiple level shifts, `historical_window`, `scan_window`, `step_window`, `.fit_predict`, `.cps`, and score functions.
+- `kats.detectors.robust_stat_detection`: https://facebookresearch.github.io/Kats/api/kats.detectors.robust_stat_detection.html and official source https://raw.githubusercontent.com/facebookresearch/Kats/main/kats/detectors/robust_stat_detection.py
+  - API page documents `RobustStatDetector`; source documents univariate support, `p_value_cutoff`, `smoothing_window_size`, `comparison_window`, z-score logic, and plotting.
+- `kats.detectors.trend_mk`: https://facebookresearch.github.io/Kats/api/kats.detectors.trend_mk.html
+  - Documents `MKDetector`, Mann-Kendall trend detection, `window_size`, `training_days`, `direction`, `freq`, multivariate support, plots, heatmap, and metadata.
+- `kats.detectors.stat_sig_detector`: https://facebookresearch.github.io/Kats/api/kats.detectors.stat_sig_detector.html
+  - Documents rolling statistical significance detectors, history/current split, `n_control`, `n_test`, and FDR handling for multivariate detection.
+- `kats.detectors.prophet_detector`: https://facebookresearch.github.io/Kats/api/kats.detectors.prophet_detector.html
+  - Documents `ProphetDetectorModel` as anomaly detection, not changepoint detection.
+- `kats.detectors.changepoint_evaluator`: https://facebookresearch.github.io/Kats/api/kats.detectors.changepoint_evaluator.html
+  - Documents Turing evaluator, `f_measure`, `get_cp_index`, and `true_positives`.
+- Detection tutorial notebook: https://raw.githubusercontent.com/facebookresearch/Kats/main/tutorials/kats_202_detection.ipynb
+  - Lists changepoint detection tutorial sections for `CUSUMDetector`, `BOCPDetector`, and `RobustStatDetector`, plus trend detection with `MKDetector`.

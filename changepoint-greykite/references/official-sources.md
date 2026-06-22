@@ -1,0 +1,21 @@
+# Official Sources Consulted
+
+- GitHub repository: https://github.com/linkedin/greykite
+  - README project scope, install command, supported model framework, notable components, and release metadata.
+- Greykite documentation index: https://linkedin.github.io/greykite/docs.html
+  - Latest public documentation page lists `1.0.0` docs.
+- Greykite 1.0.0 docs: https://linkedin.github.io/greykite/docs/1.0.0/html/index.html
+  - Navigation for quickstart, model components, API reference, and changelog.
+- Changepoints model-component docs: https://linkedin.github.io/greykite/docs/1.0.0/html/pages/model_components/0500_changepoints.html
+  - Silverkite trend changepoints, seasonality changepoints, Prophet changepoint options, notes, examples, and limitations.
+- API reference docs: https://linkedin.github.io/greykite/docs/1.0.0/html/pages/autodoc/doc.html
+  - `ChangepointDetector`, `find_trend_changepoints`, `find_seasonality_changepoints`, plotting, `ForecastConfig`, `MetadataParam`, `ModelComponentsParam`, and `EvaluationPeriodParam`.
+- Quickstart source: https://github.com/linkedin/greykite/blob/master/docs/nbpages/quickstart/01_exploration/0100_changepoint_detection.py
+  - End-to-end examples for trend changepoints, seasonality changepoints, Silverkite integration, and plots.
+- Current source files:
+  - https://github.com/linkedin/greykite/blob/master/greykite/algo/changepoint/adalasso/changepoint_detector.py
+  - https://github.com/linkedin/greykite/blob/master/greykite/algo/changepoint/adalasso/changepoints_utils.py
+  - https://github.com/linkedin/greykite/blob/master/greykite/algo/changepoint/shift_detection/shift_detector.py
+  - https://github.com/linkedin/greykite/blob/master/greykite/framework/templates/autogen/forecast_config.py
+- PyPI package: https://pypi.org/project/greykite/
+  - Latest package version, release date, install command, Python requirement, and project description.

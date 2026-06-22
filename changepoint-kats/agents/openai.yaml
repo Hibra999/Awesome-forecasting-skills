@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kats Changepoints"
+  short_description: "Detect changepoints with Kats detectors."
+  default_prompt: "Use $changepoint-kats to validate Kats TimeSeriesData inputs, choose CUSUM, BOCPD, robust statistical, rolling CUSUM model, or related trend/statistical-change detectors, tune windows and thresholds, evaluate labeled changepoints, plot results, and enforce leakage-safe offline or online workflows."

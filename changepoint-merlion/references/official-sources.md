@@ -1,0 +1,22 @@
+# Official Sources Consulted
+
+- GitHub repository: https://github.com/salesforce/Merlion
+  - Repo page states the project was archived by the owner on March 11, 2026 and is read-only.
+- README: https://github.com/salesforce/Merlion/blob/main/README.md
+  - Library scope, install commands, examples, dashboard, anomaly metrics, plotting, and support for change point detection.
+- PyPI package: https://pypi.org/project/salesforce-merlion/
+  - Latest release `salesforce-merlion 2.0.4`, released June 20, 2024; extras `all`, `dashboard`, `deep-learning`, and `spark`; Python requirement.
+- Change point module source: https://github.com/salesforce/Merlion/tree/main/merlion/models/anomaly/change_point
+  - Native change point module and BOCPD implementation.
+- BOCPD source: https://github.com/salesforce/Merlion/blob/main/merlion/models/anomaly/change_point/bocpd.py
+  - `BOCPD`, `BOCPDConfig`, `ChangeKind`, parameters, z-score outputs, online update, multivariate/even-sampling properties, default threshold.
+- Anomaly detector interface: https://github.com/salesforce/Merlion/blob/main/merlion/models/anomaly/__init__.py
+  - `train`, `get_anomaly_score`, `get_anomaly_label`, transform, post-processing, calibration, and threshold interface.
+- Evaluation source: https://github.com/salesforce/Merlion/blob/main/merlion/evaluate/anomaly.py
+  - `TSADMetric`, `ScoreType`, `TSADEvaluator`, delay windows, pointwise/point-adjusted/revised point-adjusted metrics.
+- Thresholding source: https://github.com/salesforce/Merlion/blob/main/merlion/post_process/threshold.py
+  - `Threshold`, `AggregateAlarms`, adaptive variants, threshold training behavior.
+- TimeSeries source: https://github.com/salesforce/Merlion/blob/main/merlion/utils/time_series.py
+  - `TimeSeries`, `UnivariateTimeSeries`, `from_pd`, `to_pd`, alignment, windowing, bisection, concatenation.
+- Examples directory: https://github.com/salesforce/Merlion/tree/main/examples
+  - TimeSeries tutorial and anomaly notebooks referenced by official README.
