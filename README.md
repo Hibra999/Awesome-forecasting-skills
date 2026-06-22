@@ -44,6 +44,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `changepoint-adtk` | Arundo ADTK changepoint-like anomaly event detection with pandas inputs, LevelShift/Persist/Volatility/Seasonal/Autoregression detectors, multivariate wrappers, event metrics, plotting, and anti-leakage validation. |
 | `anomaly-pyod` | PyOD anomaly/outlier detection with classic tabular detectors, time-series detectors, ADEngine, scores, labels, probabilities, thresholds, metrics, plotting, and anti-leakage validation. |
 | `anomaly-tods` | TODS automated time-series outlier detection with D3M pipelines, point/pattern/system-wise scenarios, preprocessing, feature analysis, PyOD wrappers, sequence detectors, AutoML search, metrics, and anti-leakage validation. |
+| `anomaly-luminaire` | Zillow Luminaire time-series anomaly monitoring with DataExploration profiling, HyperparameterOptimization, LAD structural/filtering models, streaming WindowDensityModel, score fields, metrics, and anti-leakage validation. |
 
 ## Workflow Notes
 
