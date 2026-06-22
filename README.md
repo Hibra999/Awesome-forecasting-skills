@@ -2,6 +2,20 @@
 
 Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, time-series feature aggregation, change point detection, and anomaly/outlier detection workflows.
 
+<p align="center">
+  <a href="https://drive.google.com/file/d/1GWQwNs-Y2glI3YgWPba5U-9bZePG-Zvt/view">
+    <img src="https://drive.google.com/thumbnail?id=1GWQwNs-Y2glI3YgWPba5U-9bZePG-Zvt&amp;sz=w1600" alt="Awesome Forecasting Skills preview" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#skills"><img alt="Skills" src="https://img.shields.io/badge/skills-forecasting%20%7C%20classification%20%7C%20anomaly-2f81f7?style=flat-square"></a>
+  <a href="#workflow-notes"><img alt="Python validation scripts" src="https://img.shields.io/badge/Python-validation%20scripts-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white"></a>
+  <a href="#skills"><img alt="Markdown documentation" src="https://img.shields.io/badge/Markdown-docs-000000?style=flat-square&amp;logo=markdown&amp;logoColor=white"></a>
+  <a href="#workflow-notes"><img alt="YAML agent configs" src="https://img.shields.io/badge/YAML-agent%20configs-CB171E?style=flat-square&amp;logo=yaml&amp;logoColor=white"></a>
+  <a href="#workflow-notes"><img alt="Anti-leakage validation" src="https://img.shields.io/badge/validation-anti--leakage-0E8A16?style=flat-square"></a>
+</p>
+
 ## Skills
 
 Use the foundational data-preparation skill before any library-specific modeling skill.
