@@ -1,0 +1,4 @@
+interface:
+  display_name: "PyOD Anomaly Detection"
+  short_description: "Detect outliers with PyOD."
+  default_prompt: "Use $anomaly-pyod to validate tabular or time-indexed feature matrices, choose PyOD classic detectors, time-series detectors, ADEngine, thresholds, scores, labels, probabilities, metrics, plots, and enforce anti-leakage safeguards for point anomaly/outlier detection."

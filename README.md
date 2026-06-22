@@ -1,6 +1,6 @@
 # Awesome Forecasting Skills
 
-Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, time-series feature aggregation, and change point detection workflows.
+Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, time-series feature aggregation, change point detection, and anomaly/outlier detection workflows.
 
 ## Skills
 
@@ -42,6 +42,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `changepoint-greykite` | LinkedIn Greykite long-term trend, seasonality, and level-shift changepoint analysis with `ChangepointDetector`, Silverkite changepoint configs, adaptive lasso, forecast backtests, plotting, and anti-leakage validation. |
 | `changepoint-luminol` | LinkedIn Luminol anomaly-window changepoint candidates with `AnomalyDetector`, bitmap/derivative/EMA/threshold/sign-test detectors, exact severity timestamps, correlation-based root-cause ranking, plotting, and anti-leakage validation. |
 | `changepoint-adtk` | Arundo ADTK changepoint-like anomaly event detection with pandas inputs, LevelShift/Persist/Volatility/Seasonal/Autoregression detectors, multivariate wrappers, event metrics, plotting, and anti-leakage validation. |
+| `anomaly-pyod` | PyOD anomaly/outlier detection with classic tabular detectors, time-series detectors, ADEngine, scores, labels, probabilities, thresholds, metrics, plotting, and anti-leakage validation. |
 
 ## Workflow Notes
 
@@ -50,5 +51,6 @@ Use the foundational data-preparation skill before any library-specific modeling
 - Pattern discovery skills require ordered, numeric time-series data with documented window length, normalization, split, and validation policy before mining motifs or matches.
 - Aggregation skills depend conceptually on time-series data preparation: define id/window/time/value fields first, then extract features and fit supervised selectors only on train folds.
 - Change point detection skills require ordered numeric signals, explicit offline vs online assumptions, method/cost/stopping-rule selection, and validation that does not leak future segments into operational predictions.
+- Anomaly detection skills require leakage-safe features, chronological validation for time-indexed data, train-only thresholding/scaling, and explicit score-to-alert policies before model comparison.
 - Each skill keeps `SKILL.md` concise and uses `references/` for longer model maps, data format notes, official sources, and limitations.
 - Scripts are included only when they add repeatable validation.
