@@ -1,6 +1,6 @@
 # Awesome Forecasting Skills
 
-Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, and time-series feature aggregation workflows.
+Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, time-series feature aggregation, and change point detection workflows.
 
 ## Skills
 
@@ -33,6 +33,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `aggregation-kats` | Kats TSFeatures aggregation for converting TimeSeriesData into tabular feature rows, with univariate/multivariate outputs, multiple-series loops, feature groups, opt-in/out switches, and leakage-safe downstream ML validation. |
 | `aggregation-tsfel` | TSFEL feature aggregation for tabular ML matrices, with ndarray/Series/DataFrame inputs, univariate/multivariate signals, windowing, statistical/temporal/spectral/fractal domains, dataset extraction, custom configs, and anti-leakage validation. |
 | `aggregation-tsflex` | tsflex flexible feature aggregation with pandas Series/DataFrame/list inputs, asynchronous multivariate data, irregular sampling, custom callable features, strided windows, chunking, external feature wrappers, and anti-leakage validation. |
+| `changepoint-ruptures` | ruptures offline change point detection with exact/approximate search methods, cost functions, penalties, breakpoint-count tuning, segmentation metrics, plotting, custom costs, and anti-leakage validation. |
 
 ## Workflow Notes
 
@@ -40,5 +41,6 @@ Use the foundational data-preparation skill before any library-specific modeling
 - Classification skills depend conceptually on `ts-classification-data-prep`: prepare, pad/truncate, validate labels and tensor/panel shapes first, then classify.
 - Pattern discovery skills require ordered, numeric time-series data with documented window length, normalization, split, and validation policy before mining motifs or matches.
 - Aggregation skills depend conceptually on time-series data preparation: define id/window/time/value fields first, then extract features and fit supervised selectors only on train folds.
+- Change point detection skills require ordered numeric signals, explicit offline vs online assumptions, method/cost/stopping-rule selection, and validation that does not leak future segments into operational predictions.
 - Each skill keeps `SKILL.md` concise and uses `references/` for longer model maps, data format notes, official sources, and limitations.
 - Scripts are included only when they add repeatable validation.
