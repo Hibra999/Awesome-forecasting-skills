@@ -1,0 +1,4 @@
+interface:
+  display_name: "FEDOT Forecasting"
+  short_description: "AutoML forecasting with FEDOT"
+  default_prompt: "Use $fedot-forecasting to build and validate a leakage-safe FEDOT time-series forecasting workflow from prepared data."
