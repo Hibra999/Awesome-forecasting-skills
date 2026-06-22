@@ -1,0 +1,4 @@
+interface:
+  display_name: "tsfresh Aggregation"
+  short_description: "Extract tabular features from time series with tsfresh."
+  default_prompt: "Use $aggregation-tsfresh to validate tsfresh data formats, extract statistical time-series features, select relevant features, and build leakage-safe tabular ML inputs."
