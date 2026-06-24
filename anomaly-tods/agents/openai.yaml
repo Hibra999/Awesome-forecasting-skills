@@ -1,0 +1,4 @@
+interface:
+  display_name: "TODS Anomaly Detection"
+  short_description: "Detect time-series outliers with TODS."
+  default_prompt: "Use $anomaly-tods to validate multivariate time-series data, choose TODS point-wise, pattern-wise, or system-wise outlier detection pipelines, configure D3M primitives, default pipelines, AutoML search, scores, labels, metrics, and anti-leakage safeguards."

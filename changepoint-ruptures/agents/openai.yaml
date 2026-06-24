@@ -1,0 +1,4 @@
+interface:
+  display_name: "ruptures Changepoints"
+  short_description: "Detect offline changepoints with ruptures."
+  default_prompt: "Use $changepoint-ruptures to validate ordered time-series signals, choose ruptures search methods and cost functions, fit offline changepoint detectors, tune penalties or breakpoint counts, evaluate segmentations, plot results, and enforce leakage-safe segmentation workflows."

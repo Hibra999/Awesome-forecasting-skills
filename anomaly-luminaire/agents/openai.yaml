@@ -1,0 +1,4 @@
+interface:
+  display_name: "Luminaire Anomaly Detection"
+  short_description: "Detect time-series anomalies with Luminaire."
+  default_prompt: "Use $anomaly-luminaire to validate univariate time-series data, choose Luminaire batch outlier or streaming window-density detection, run profiling, hyperparameter optimization, LADStructuralModel, LADFilteringModel, WindowDensityModel, score anomalies, and enforce anti-leakage safeguards."

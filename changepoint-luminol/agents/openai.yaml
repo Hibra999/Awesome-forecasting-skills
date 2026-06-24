@@ -1,0 +1,4 @@
+interface:
+  display_name: "Luminol Changepoints"
+  short_description: "Detect Luminol anomaly-change events."
+  default_prompt: "Use $changepoint-luminol to validate time-series inputs, use LinkedIn Luminol anomaly detectors as changepoint/event proxies, configure thresholds, baselines, anomaly windows, exact timestamps, correlation-based root-cause analysis, evaluation, plotting, and anti-leakage safeguards."

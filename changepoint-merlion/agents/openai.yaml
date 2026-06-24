@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merlion Changepoints"
+  short_description: "Detect changepoints with Merlion BOCPD."
+  default_prompt: "Use $changepoint-merlion to validate Merlion TimeSeries inputs, configure BOCPD level-shift or trend-change detection, set cp_prior, lag, thresholds, post-processing, evaluate changepoint alarms with TSAD metrics and detection delay, plot results, and avoid leakage in online or retrospective workflows."

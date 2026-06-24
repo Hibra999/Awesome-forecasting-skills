@@ -1,0 +1,25 @@
+# Official Sources Consulted
+
+- GitHub repository and README: https://github.com/thuml/Time-Series-Library
+  - TSLib covers five mainstream tasks: long-/short-term forecasting, imputation, anomaly detection, and classification.
+  - README quick test includes `--task_name anomaly_detection` with `PSM`, `TimesNet`, `--seq_len 100`, `--pred_len 0`, `--features M`, and `--anomaly_ratio`.
+  - README note says anomaly-detection adjustment strategy corresponds to an event-level metric.
+  - README news says maintainers will not actively add new features and recommends newer benchmarks for current research progress.
+- `run.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/run.py
+  - Documents CLI arguments, task dispatch, `--anomaly_ratio`, model/dataset arguments, training/testing modes, and auto checkpoint setting.
+- `exp/exp_anomaly_detection.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/exp/exp_anomaly_detection.py
+  - Documents training/validation/test flow, reconstruction MSE, percentile thresholding from train+test energy, labels, adjustment, and metrics.
+- `utils/tools.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/utils/tools.py
+  - Documents `adjustment(gt, pred)` event-level expansion behavior.
+- `data_provider/data_factory.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/data_provider/data_factory.py
+  - Maps `anomaly_detection` to `PSM`, `MSL`, `SMAP`, `SMD`, and `SWAT` loaders; uses `win_size=args.seq_len`.
+- `data_provider/data_loader.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/data_provider/data_loader.py
+  - Documents loader file names, `StandardScaler` fit on train data, `test_labels`, windowing, and Hugging Face fallback.
+- Official anomaly scripts:
+  - https://github.com/thuml/Time-Series-Library/tree/main/scripts/anomaly_detection
+  - https://raw.githubusercontent.com/thuml/Time-Series-Library/main/scripts/anomaly_detection/PSM/TimesNet.sh
+  - https://raw.githubusercontent.com/thuml/Time-Series-Library/main/scripts/anomaly_detection/MSL/TimesNet.sh
+- `exp/exp_basic.py`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/exp/exp_basic.py
+  - Documents automatic model discovery from `models/` and lazy import behavior.
+- `requirements.txt`: https://raw.githubusercontent.com/thuml/Time-Series-Library/main/requirements.txt
+  - Documents dependency versions in the current repository.

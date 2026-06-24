@@ -1,0 +1,4 @@
+interface:
+  display_name: "Greykite Changepoints"
+  short_description: "Detect Greykite trend and seasonality changes."
+  default_prompt: "Use $changepoint-greykite to validate pandas time-series data, run Greykite ChangepointDetector, configure Silverkite trend and seasonality changepoints, level-shift regressors, plotting, validation, and anti-leakage safeguards."

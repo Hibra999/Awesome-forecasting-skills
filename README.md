@@ -1,6 +1,20 @@
 # Awesome Forecasting Skills
 
-Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, and time-series feature aggregation workflows.
+Skills for AI agents working on forecasting, time-series data preparation, time-series classification, time-series pattern discovery, time-series feature aggregation, change point detection, and anomaly/outlier detection workflows.
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1GWQwNs-Y2glI3YgWPba5U-9bZePG-Zvt/view">
+    <img src="https://drive.google.com/thumbnail?id=1GWQwNs-Y2glI3YgWPba5U-9bZePG-Zvt&amp;sz=w1600" alt="Awesome Forecasting Skills preview" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#skills"><img alt="Skills" src="https://img.shields.io/badge/skills-forecasting%20%7C%20classification%20%7C%20anomaly-2f81f7?style=flat-square"></a>
+  <a href="#workflow-notes"><img alt="Python validation scripts" src="https://img.shields.io/badge/Python-validation%20scripts-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white"></a>
+  <a href="#skills"><img alt="Markdown documentation" src="https://img.shields.io/badge/Markdown-docs-000000?style=flat-square&amp;logo=markdown&amp;logoColor=white"></a>
+  <a href="#workflow-notes"><img alt="YAML agent configs" src="https://img.shields.io/badge/YAML-agent%20configs-CB171E?style=flat-square&amp;logo=yaml&amp;logoColor=white"></a>
+  <a href="#workflow-notes"><img alt="Anti-leakage validation" src="https://img.shields.io/badge/validation-anti--leakage-0E8A16?style=flat-square"></a>
+</p>
 
 ## Skills
 
@@ -33,6 +47,18 @@ Use the foundational data-preparation skill before any library-specific modeling
 | `aggregation-kats` | Kats TSFeatures aggregation for converting TimeSeriesData into tabular feature rows, with univariate/multivariate outputs, multiple-series loops, feature groups, opt-in/out switches, and leakage-safe downstream ML validation. |
 | `aggregation-tsfel` | TSFEL feature aggregation for tabular ML matrices, with ndarray/Series/DataFrame inputs, univariate/multivariate signals, windowing, statistical/temporal/spectral/fractal domains, dataset extraction, custom configs, and anti-leakage validation. |
 | `aggregation-tsflex` | tsflex flexible feature aggregation with pandas Series/DataFrame/list inputs, asynchronous multivariate data, irregular sampling, custom callable features, strided windows, chunking, external feature wrappers, and anti-leakage validation. |
+| `changepoint-ruptures` | ruptures offline change point detection with exact/approximate search methods, cost functions, penalties, breakpoint-count tuning, segmentation metrics, plotting, custom costs, and anti-leakage validation. |
+| `changepoint-prophet` | Prophet trend changepoint analysis inside forecasting workflows, with ds/y validation, automatic/manual changepoints, prior-scale tuning, significant-delta plotting, cross-validation, intervals, regressors, shocks, and anti-leakage safeguards. |
+| `changepoint-kats` | Kats changepoint and process-change detection with TimeSeriesData, CUSUM, BOCPD, robust statistical detection, rolling CUSUM models, related trend/statistical-change detectors, evaluation, plotting, and anti-leakage validation. |
+| `changepoint-time-series-library` | THUML Time-Series-Library process-change event detection via the documented anomaly_detection task, with PSM/MSL/SMAP/SMD/SWAT loaders, reconstruction-error thresholds, anomaly_ratio, event-level adjustment, metrics, and leakage-safe anomaly-to-changepoint conversion. |
+| `changepoint-merlion` | Salesforce Merlion native BOCPD changepoint detection with TimeSeries inputs, LevelShift/TrendChange/Auto change kinds, online updates, z-score probability scoring, thresholded alarms, TSAD metrics, plotting, and anti-leakage validation. |
+| `changepoint-alibi-detect` | Seldon Alibi Detect changepoint-like distribution-change monitoring with online MMD/LSDD/CVM/FET drift detectors, rolling offline drift tests, reference windows, ERT, window sizes, state, plotting, and anti-leakage validation. |
+| `changepoint-greykite` | LinkedIn Greykite long-term trend, seasonality, and level-shift changepoint analysis with `ChangepointDetector`, Silverkite changepoint configs, adaptive lasso, forecast backtests, plotting, and anti-leakage validation. |
+| `changepoint-luminol` | LinkedIn Luminol anomaly-window changepoint candidates with `AnomalyDetector`, bitmap/derivative/EMA/threshold/sign-test detectors, exact severity timestamps, correlation-based root-cause ranking, plotting, and anti-leakage validation. |
+| `changepoint-adtk` | Arundo ADTK changepoint-like anomaly event detection with pandas inputs, LevelShift/Persist/Volatility/Seasonal/Autoregression detectors, multivariate wrappers, event metrics, plotting, and anti-leakage validation. |
+| `anomaly-pyod` | PyOD anomaly/outlier detection with classic tabular detectors, time-series detectors, ADEngine, scores, labels, probabilities, thresholds, metrics, plotting, and anti-leakage validation. |
+| `anomaly-tods` | TODS automated time-series outlier detection with D3M pipelines, point/pattern/system-wise scenarios, preprocessing, feature analysis, PyOD wrappers, sequence detectors, AutoML search, metrics, and anti-leakage validation. |
+| `anomaly-luminaire` | Zillow Luminaire time-series anomaly monitoring with DataExploration profiling, HyperparameterOptimization, LAD structural/filtering models, streaming WindowDensityModel, score fields, metrics, and anti-leakage validation. |
 
 ## Workflow Notes
 
@@ -40,5 +66,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 - Classification skills depend conceptually on `ts-classification-data-prep`: prepare, pad/truncate, validate labels and tensor/panel shapes first, then classify.
 - Pattern discovery skills require ordered, numeric time-series data with documented window length, normalization, split, and validation policy before mining motifs or matches.
 - Aggregation skills depend conceptually on time-series data preparation: define id/window/time/value fields first, then extract features and fit supervised selectors only on train folds.
+- Change point detection skills require ordered numeric signals, explicit offline vs online assumptions, method/cost/stopping-rule selection, and validation that does not leak future segments into operational predictions.
+- Anomaly detection skills require leakage-safe features, chronological validation for time-indexed data, train-only thresholding/scaling, and explicit score-to-alert policies before model comparison.
 - Each skill keeps `SKILL.md` concise and uses `references/` for longer model maps, data format notes, official sources, and limitations.
 - Scripts are included only when they add repeatable validation.
