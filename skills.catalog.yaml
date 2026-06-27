@@ -1,0 +1,357 @@
+schema_version: 1
+skills:
+  - id: forecasting-data-prep
+    domain: forecasting
+    stage: prep
+    path: forecasting-data-prep
+    depends_on: []
+    agent_config: forecasting-data-prep/agents/openai.yaml
+    references: forecasting-data-prep/references
+    scripts:
+      - forecasting-data-prep/scripts/forecasting_data_audit.py
+
+  - id: ts-classification-data-prep
+    domain: classification
+    stage: prep
+    path: ts-classification-data-prep
+    depends_on: []
+    agent_config: ts-classification-data-prep/agents/openai.yaml
+    references: ts-classification-data-prep/references
+    scripts:
+      - ts-classification-data-prep/scripts/validate_classification_contract.py
+
+  - id: prophet-forecasting
+    domain: forecasting
+    stage: modeling
+    path: prophet-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: prophet-forecasting/agents/openai.yaml
+    references: prophet-forecasting/references
+    scripts:
+      - prophet-forecasting/scripts/prophet_contract_check.py
+  - id: statsmodels-forecasting
+    domain: forecasting
+    stage: modeling
+    path: statsmodels-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: statsmodels-forecasting/agents/openai.yaml
+    references: statsmodels-forecasting/references
+    scripts:
+      - statsmodels-forecasting/scripts/statsmodels_contract_check.py
+  - id: sktime-forecasting
+    domain: forecasting
+    stage: modeling
+    path: sktime-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: sktime-forecasting/agents/openai.yaml
+    references: sktime-forecasting/references
+    scripts: []
+  - id: darts-forecasting
+    domain: forecasting
+    stage: modeling
+    path: darts-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: darts-forecasting/agents/openai.yaml
+    references: darts-forecasting/references
+    scripts: []
+  - id: kats-forecasting
+    domain: forecasting
+    stage: modeling
+    path: kats-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: kats-forecasting/agents/openai.yaml
+    references: kats-forecasting/references
+    scripts: []
+  - id: time-series-library-forecasting
+    domain: forecasting
+    stage: modeling
+    path: time-series-library-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: time-series-library-forecasting/agents/openai.yaml
+    references: time-series-library-forecasting/references
+    scripts: []
+  - id: pytorch-forecasting
+    domain: forecasting
+    stage: modeling
+    path: pytorch-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: pytorch-forecasting/agents/openai.yaml
+    references: pytorch-forecasting/references
+    scripts: []
+  - id: statsforecast
+    domain: forecasting
+    stage: modeling
+    path: statsforecast
+    depends_on: [forecasting-data-prep]
+    agent_config: statsforecast/agents/openai.yaml
+    references: statsforecast/references
+    scripts: []
+  - id: merlion-forecasting
+    domain: forecasting
+    stage: modeling
+    path: merlion-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: merlion-forecasting/agents/openai.yaml
+    references: merlion-forecasting/references
+    scripts: []
+  - id: greykite-forecasting
+    domain: forecasting
+    stage: modeling
+    path: greykite-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: greykite-forecasting/agents/openai.yaml
+    references: greykite-forecasting/references
+    scripts: []
+  - id: skforecast
+    domain: forecasting
+    stage: modeling
+    path: skforecast
+    depends_on: [forecasting-data-prep]
+    agent_config: skforecast/agents/openai.yaml
+    references: skforecast/references
+    scripts: []
+  - id: etna-forecasting
+    domain: forecasting
+    stage: modeling
+    path: etna-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: etna-forecasting/agents/openai.yaml
+    references: etna-forecasting/references
+    scripts: []
+  - id: fedot-forecasting
+    domain: forecasting
+    stage: modeling
+    path: fedot-forecasting
+    depends_on: [forecasting-data-prep]
+    agent_config: fedot-forecasting/agents/openai.yaml
+    references: fedot-forecasting/references
+    scripts: []
+
+  - id: classification-sktime
+    domain: classification
+    stage: modeling
+    path: classification-sktime
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-sktime/agents/openai.yaml
+    references: classification-sktime/references
+    scripts:
+      - classification-sktime/scripts/validate_numpy3d.py
+  - id: classification-time-series-library
+    domain: classification
+    stage: modeling
+    path: classification-time-series-library
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-time-series-library/agents/openai.yaml
+    references: classification-time-series-library/references
+    scripts:
+      - classification-time-series-library/scripts/validate_uea_ts_split.py
+  - id: classification-tslearn
+    domain: classification
+    stage: modeling
+    path: classification-tslearn
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-tslearn/agents/openai.yaml
+    references: classification-tslearn/references
+    scripts:
+      - classification-tslearn/scripts/validate_tslearn_array.py
+  - id: classification-pyts
+    domain: classification
+    stage: modeling
+    path: classification-pyts
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-pyts/agents/openai.yaml
+    references: classification-pyts/references
+    scripts:
+      - classification-pyts/scripts/validate_pyts_array.py
+  - id: classification-dl-4-tsc
+    domain: classification
+    stage: modeling
+    path: classification-dl-4-tsc
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-dl-4-tsc/agents/openai.yaml
+    references: classification-dl-4-tsc/references
+    scripts:
+      - classification-dl-4-tsc/scripts/validate_dl4tsc_arrays.py
+  - id: classification-etna
+    domain: classification
+    stage: modeling
+    path: classification-etna
+    depends_on: [ts-classification-data-prep]
+    agent_config: classification-etna/agents/openai.yaml
+    references: classification-etna/references
+    scripts:
+      - classification-etna/scripts/validate_etna_classification_data.py
+
+  - id: clustering-stumpy
+    domain: clustering
+    stage: discovery
+    path: clustering-stumpy
+    depends_on: []
+    preconditions: [time-series data contract]
+    agent_config: clustering-stumpy/agents/openai.yaml
+    references: clustering-stumpy/references
+    scripts:
+      - clustering-stumpy/scripts/validate_stumpy_input.py
+
+  - id: aggregation-tsfresh
+    domain: aggregation
+    stage: feature_aggregation
+    path: aggregation-tsfresh
+    depends_on: []
+    preconditions: [time-series data contract]
+    agent_config: aggregation-tsfresh/agents/openai.yaml
+    references: aggregation-tsfresh/references
+    scripts:
+      - aggregation-tsfresh/scripts/validate_tsfresh_frame.py
+  - id: aggregation-kats
+    domain: aggregation
+    stage: feature_aggregation
+    path: aggregation-kats
+    depends_on: []
+    preconditions: [time-series data contract]
+    agent_config: aggregation-kats/agents/openai.yaml
+    references: aggregation-kats/references
+    scripts:
+      - aggregation-kats/scripts/validate_kats_tsfeatures_csv.py
+  - id: aggregation-tsfel
+    domain: aggregation
+    stage: feature_aggregation
+    path: aggregation-tsfel
+    depends_on: []
+    preconditions: [time-series data contract]
+    agent_config: aggregation-tsfel/agents/openai.yaml
+    references: aggregation-tsfel/references
+    scripts:
+      - aggregation-tsfel/scripts/validate_tsfel_frame.py
+  - id: aggregation-tsflex
+    domain: aggregation
+    stage: feature_aggregation
+    path: aggregation-tsflex
+    depends_on: []
+    preconditions: [time-series data contract]
+    agent_config: aggregation-tsflex/agents/openai.yaml
+    references: aggregation-tsflex/references
+    scripts:
+      - aggregation-tsflex/scripts/validate_tsflex_frame.py
+
+  - id: changepoint-ruptures
+    domain: changepoint
+    stage: detection
+    path: changepoint-ruptures
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-ruptures/agents/openai.yaml
+    references: changepoint-ruptures/references
+    scripts:
+      - changepoint-ruptures/scripts/validate_ruptures_signal.py
+  - id: changepoint-prophet
+    domain: changepoint
+    stage: detection
+    path: changepoint-prophet
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-prophet/agents/openai.yaml
+    references: changepoint-prophet/references
+    scripts:
+      - changepoint-prophet/scripts/validate_prophet_changepoints.py
+  - id: changepoint-kats
+    domain: changepoint
+    stage: detection
+    path: changepoint-kats
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-kats/agents/openai.yaml
+    references: changepoint-kats/references
+    scripts:
+      - changepoint-kats/scripts/validate_kats_changepoints.py
+  - id: changepoint-time-series-library
+    domain: changepoint
+    stage: detection
+    path: changepoint-time-series-library
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-time-series-library/agents/openai.yaml
+    references: changepoint-time-series-library/references
+    scripts:
+      - changepoint-time-series-library/scripts/validate_tslib_anomaly_inputs.py
+  - id: changepoint-merlion
+    domain: changepoint
+    stage: detection
+    path: changepoint-merlion
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-merlion/agents/openai.yaml
+    references: changepoint-merlion/references
+    scripts:
+      - changepoint-merlion/scripts/validate_merlion_changepoints.py
+  - id: changepoint-alibi-detect
+    domain: changepoint
+    stage: detection
+    path: changepoint-alibi-detect
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-alibi-detect/agents/openai.yaml
+    references: changepoint-alibi-detect/references
+    scripts:
+      - changepoint-alibi-detect/scripts/validate_alibi_detect_changepoints.py
+  - id: changepoint-greykite
+    domain: changepoint
+    stage: detection
+    path: changepoint-greykite
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-greykite/agents/openai.yaml
+    references: changepoint-greykite/references
+    scripts:
+      - changepoint-greykite/scripts/validate_greykite_changepoints.py
+  - id: changepoint-luminol
+    domain: changepoint
+    stage: detection
+    path: changepoint-luminol
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-luminol/agents/openai.yaml
+    references: changepoint-luminol/references
+    scripts:
+      - changepoint-luminol/scripts/validate_luminol_changepoints.py
+  - id: changepoint-adtk
+    domain: changepoint
+    stage: detection
+    path: changepoint-adtk
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: changepoint-adtk/agents/openai.yaml
+    references: changepoint-adtk/references
+    scripts:
+      - changepoint-adtk/scripts/validate_adtk_changepoints.py
+
+  - id: anomaly-pyod
+    domain: anomaly
+    stage: detection
+    path: anomaly-pyod
+    depends_on: []
+    preconditions: [time-series feature contract]
+    agent_config: anomaly-pyod/agents/openai.yaml
+    references: anomaly-pyod/references
+    scripts:
+      - anomaly-pyod/scripts/validate_pyod_anomaly_input.py
+  - id: anomaly-tods
+    domain: anomaly
+    stage: detection
+    path: anomaly-tods
+    depends_on: []
+    preconditions: [ordered time-series data contract]
+    agent_config: anomaly-tods/agents/openai.yaml
+    references: anomaly-tods/references
+    scripts:
+      - anomaly-tods/scripts/validate_tods_anomaly_input.py
+  - id: anomaly-luminaire
+    domain: anomaly
+    stage: detection
+    path: anomaly-luminaire
+    depends_on: []
+    preconditions: [ordered univariate time-series contract]
+    agent_config: anomaly-luminaire/agents/openai.yaml
+    references: anomaly-luminaire/references
+    scripts:
+      - anomaly-luminaire/scripts/validate_luminaire_anomaly_input.py

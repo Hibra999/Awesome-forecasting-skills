@@ -1,0 +1,6 @@
+interface:
+  display_name: "Time-Series Classification Data Prep"
+  short_description: "Prepare classification series safely"
+  default_prompt: "Use $ts-classification-data-prep to audit and prepare my time-series classification dataset before choosing a classifier."
+policy:
+  allow_implicit_invocation: true
