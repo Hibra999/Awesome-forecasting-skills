@@ -13,6 +13,14 @@
 - The first foundational skill must cover forecasting data preparation before any library-specific modeling skill is created.
 - Library-specific skills should be generated from an official GitHub repo, documentation site, or package documentation provided by the user.
 - Library-specific skills should depend conceptually on the data-preparation skill: prepare and validate data first, then model.
+- Classification skills must depend conceptually on `ts-classification-data-prep`: define samples, labels, shapes, splits, class balance, and leakage-safe preprocessing before classifier-specific work.
+
+# Agent Architecture
+
+- Keep one folder per skill with `SKILL.md`, `references/`, optional `scripts/`, and `agents/openai.yaml`.
+- Keep `skills.catalog.yaml` updated for every skill. It is the machine-readable routing and dependency map for agents.
+- Agent flow should be prep skill first, task/library skill second, validation and leakage checks throughout.
+- Run `python scripts/validate_skill_repo.py` before considering work ready for review or merge.
 
 # Skill Standards
 

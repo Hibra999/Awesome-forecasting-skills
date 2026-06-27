@@ -23,6 +23,7 @@ Use the foundational data-preparation skill before any library-specific modeling
 | Skill | Purpose |
 | --- | --- |
 | `forecasting-data-prep` | Foundational forecasting skill for preparing, validating, splitting, and diagnosing time-series data before modeling. |
+| `ts-classification-data-prep` | Foundational time-series classification skill for defining samples, labels, shapes, split policy, class balance, preprocessing boundaries, and leakage safeguards before classifier-specific workflows. |
 | `prophet-forecasting` | Prophet forecasting with regressors, holidays, temporal validation, intervals, diagnostics, and leakage checks. |
 | `statsmodels-forecasting` | Statsmodels classical/econometric forecasting, including ARIMA/SARIMAX/ETS/state-space models, exogenous regressors, intervals, and diagnostics. |
 | `sktime-forecasting` | sktime forecasting workflows, including forecasters, transformations, exogenous variables, backtesting, metrics, and probabilistic outputs where supported. |
@@ -70,3 +71,9 @@ Use the foundational data-preparation skill before any library-specific modeling
 - Anomaly detection skills require leakage-safe features, chronological validation for time-indexed data, train-only thresholding/scaling, and explicit score-to-alert policies before model comparison.
 - Each skill keeps `SKILL.md` concise and uses `references/` for longer model maps, data format notes, official sources, and limitations.
 - Scripts are included only when they add repeatable validation.
+
+## Agent Architecture
+
+- `skills.catalog.yaml` is the machine-readable source for skill IDs, domains, stages, dependencies, agent config paths, references, and declared scripts.
+- Agent routing should follow the catalog before reading a library-specific skill: preparation skill first, modeling or detection skill second, validation and leakage checks throughout.
+- Run `python scripts/validate_skill_repo.py` after adding or changing skills.
